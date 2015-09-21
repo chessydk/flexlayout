@@ -1,0 +1,145 @@
+.stackpanel {
+    display: flex;
+    flex-wrap: nowrap;
+
+    @at-root &:not(.sp--v) {
+        flex-direction: row;
+
+        @at-root &.sp--align-left {
+            justify-content: flex-start;
+        }
+
+        @at-root &.sp--align-h-center {
+            justify-content: center;
+        }
+
+        @at-root &.sp--align-right {
+            justify-content: flex-end;
+        }
+
+        @at-root &.sp--align-h-space-between {
+            justify-content: space-between;
+        }
+
+        @at-root &.sp--align-h-space-around {
+            justify-content: space-around;
+        }
+
+        @at-root &.sp--align-top {
+            align-items: flex-start;
+        }
+
+        @at-root &.sp--align-v-center {
+            align-items: center;
+        }
+
+        @at-root &.sp--align-bottom {
+            align-items: flex-end;
+        }
+
+        @at-root &.sp--align-v-stretch {
+            align-items: stretch;
+        }
+
+        @at-root &.sp--align-v-baseline {
+            align-items: baseline;
+        }
+
+        .sp__item--align-top {
+            align-self: flex-start;
+        }
+
+        .sp__item--align-v-center {
+            align-self: center;
+        }
+
+        .sp__item--align-bottom {
+            align-self: flex-end;
+        }
+
+        .sp__item--align-v-stretch {
+            align-self: stretch;
+        }
+
+        .sp__item--align-v-baseline {
+            align-self: baseline;
+        }
+    }
+
+    @at-root &.sp--v {
+        flex-direction: column;
+
+        @at-root &.sp--align-top {
+            justify-content: flex-start;
+        }
+
+        @at-root &.sp--align-v-center {
+            justify-content: center;
+        }
+
+        @at-root &.sp--align-bottom {
+            justify-content: flex-end;
+        }
+
+        @at-root &.sp--align-v-space-between {
+            justify-content: space-between;
+        }
+
+        @at-root &.sp--align-v-space-around {
+            justify-content: space-around;
+        }
+
+        @at-root &.sp--align-left {
+            align-items: flex-start;
+        }
+
+        @at-root &.sp--align-h-center {
+            align-items: center;
+        }
+
+        @at-root &.sp--align-right {
+            align-items: flex-end;
+        }
+
+        @at-root &.sp--align-h-stretch {
+            align-items: stretch;
+        }
+
+        @at-root &.sp--align-h-baseline {
+            align-items: baseline;
+        }
+
+        .sp__item--align-left {
+            align-self: flex-start;
+        }
+
+        .sp__item--align-h-center {
+            align-self: center;
+        }
+
+        .sp__item--align-right {
+            align-self: flex-end;
+        }
+
+        .sp__item--align-h-stretch {
+            align-self: stretch;
+        }
+
+        .sp__item--align-h-baseline {
+            align-self: baseline;
+        }
+    }
+
+    @for $i from 1 through 5 {
+        & > .sp__item--size-flex-#{$i} {
+            flex: #{$i};
+        }
+    }
+
+    $noOfCols: 12;
+    @for $i from 1 through $noOfCols {
+        & > .sp__item--size-ratio-#{$i} {
+            flex: 0 0 #{percentage($i/$noOfCols)};
+        }
+    }
+}

@@ -1,0 +1,45 @@
+.full-view {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px; }
+
+*, *:after, *:before {
+  box-sizing: border-box; }
+
+html, body {
+  margin: 0px;
+  padding: 0px; }
+
+.with-margins {
+  margin: 10px;
+  background: lightgrey; }
+
+.panel {
+  position: relative;
+  border-radius: 4px;
+  background: white;
+  border: 1px solid #ddd;
+  margin: 10px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); }
+  .panel:last-child:not(:only-child) {
+    margin-right: -4px; }
+
+.showme1, .showme2, .showme3 {
+  background: orange;
+  border: 1px solid black; }
+
+.showme1 {
+  min-height: 30px;
+  min-width: 30px; }
+
+.showme2 {
+  min-height: 40px;
+  min-width: 40px; }
+
+.showme3 {
+  min-height: 50px;
+  min-width: 50px; }
+
+/*# sourceMappingURL=helpers.css.map */
