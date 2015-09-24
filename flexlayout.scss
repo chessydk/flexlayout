@@ -130,7 +130,7 @@
         }
     }
 
-    @for $i from 1 through 5 {
+    @for $i from 1 through 10 {
         & > .sp__item--size-flex-#{$i} {
             flex: #{$i};
         }

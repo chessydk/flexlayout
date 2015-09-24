@@ -75,6 +75,16 @@
     flex: 4; }
   .stackpanel > .sp__item--size-flex-5 {
     flex: 5; }
+  .stackpanel > .sp__item--size-flex-6 {
+    flex: 6; }
+  .stackpanel > .sp__item--size-flex-7 {
+    flex: 7; }
+  .stackpanel > .sp__item--size-flex-8 {
+    flex: 8; }
+  .stackpanel > .sp__item--size-flex-9 {
+    flex: 9; }
+  .stackpanel > .sp__item--size-flex-10 {
+    flex: 10; }
   .stackpanel > .sp__item--size-percent-10 {
     flex: 0 0 10%; }
   .stackpanel > .sp__item--size-percent-20 {
