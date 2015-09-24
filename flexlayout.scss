@@ -136,6 +136,12 @@
         }
     }
 
+    @for $i from 1 through 10 {
+        & > .sp__item--size-percent-#{$i*10} {
+            flex: 0 0 #{percentage($i/10)};
+        }
+    }
+
     $noOfCols: 12;
     @for $i from 1 through $noOfCols {
         & > .sp__item--size-ratio-#{$i} {

@@ -75,6 +75,26 @@
     flex: 4; }
   .stackpanel > .sp__item--size-flex-5 {
     flex: 5; }
+  .stackpanel > .sp__item--size-percent-10 {
+    flex: 0 0 10%; }
+  .stackpanel > .sp__item--size-percent-20 {
+    flex: 0 0 20%; }
+  .stackpanel > .sp__item--size-percent-30 {
+    flex: 0 0 30%; }
+  .stackpanel > .sp__item--size-percent-40 {
+    flex: 0 0 40%; }
+  .stackpanel > .sp__item--size-percent-50 {
+    flex: 0 0 50%; }
+  .stackpanel > .sp__item--size-percent-60 {
+    flex: 0 0 60%; }
+  .stackpanel > .sp__item--size-percent-70 {
+    flex: 0 0 70%; }
+  .stackpanel > .sp__item--size-percent-80 {
+    flex: 0 0 80%; }
+  .stackpanel > .sp__item--size-percent-90 {
+    flex: 0 0 90%; }
+  .stackpanel > .sp__item--size-percent-100 {
+    flex: 0 0 100%; }
   .stackpanel > .sp__item--size-ratio-1 {
     flex: 0 0 8.33333%; }
   .stackpanel > .sp__item--size-ratio-2 {
@@ -99,5 +119,3 @@
     flex: 0 0 91.66667%; }
   .stackpanel > .sp__item--size-ratio-12 {
     flex: 0 0 100%; }
-
-/*# sourceMappingURL=flexlayout.css.map */
