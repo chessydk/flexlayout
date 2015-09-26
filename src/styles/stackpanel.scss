@@ -2,6 +2,14 @@
     display: flex;
     flex-wrap: nowrap;
 
+    > div {
+        flex: 1;
+    }
+
+    .sp__item--size-no-flex {
+        flex: none;
+    }
+
     @at-root &:not(.sp--v) {
         flex-direction: row;
 
