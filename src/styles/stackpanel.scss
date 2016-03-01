@@ -2,157 +2,153 @@
     display: flex;
     flex-wrap: nowrap;
 
-    > div {
-        flex: 1;
-    }
-
-    .sp__item--size-no-flex {
-        flex: none;
-    }
-
     @at-root &:not(.sp--v) {
         flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
 
-        @at-root &.sp--align-left {
+        @at-root &.sp--left {
             justify-content: flex-start;
         }
 
-        @at-root &.sp--align-h-center {
+        @at-root &.sp--h-center {
             justify-content: center;
         }
 
-        @at-root &.sp--align-right {
+        @at-root &.sp--right {
             justify-content: flex-end;
         }
 
-        @at-root &.sp--align-h-space-between {
+        @at-root &.sp--space-between {
             justify-content: space-between;
         }
 
-        @at-root &.sp--align-h-space-around {
+        @at-root &.sp--space-around {
             justify-content: space-around;
         }
 
-        @at-root &.sp--align-top {
+        @at-root &.sp--top {
             align-items: flex-start;
         }
 
-        @at-root &.sp--align-v-center {
+        @at-root &.sp--v-center {
             align-items: center;
         }
 
-        @at-root &.sp--align-bottom {
+        @at-root &.sp--bottom {
             align-items: flex-end;
         }
 
-        @at-root &.sp--align-v-stretch {
+        @at-root &.sp--stretch {
             align-items: stretch;
         }
 
-        @at-root &.sp--align-v-baseline {
+        @at-root &.sp--baseline {
             align-items: baseline;
         }
 
-        .sp__item--align-top {
+        .sp__item--top {
             align-self: flex-start;
         }
 
-        .sp__item--align-v-center {
+        .sp__item--center {
             align-self: center;
         }
 
-        .sp__item--align-bottom {
+        .sp__item--bottom {
             align-self: flex-end;
         }
 
-        .sp__item--align-v-stretch {
+        .sp__item--stretch {
             align-self: stretch;
         }
 
-        .sp__item--align-v-baseline {
+        .sp__item--baseline {
             align-self: baseline;
         }
     }
 
     @at-root &.sp--v {
         flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
 
-        @at-root &.sp--align-top {
+        @at-root &.sp--top {
             justify-content: flex-start;
         }
 
-        @at-root &.sp--align-v-center {
+        @at-root &.sp--v-center {
             justify-content: center;
         }
 
-        @at-root &.sp--align-bottom {
+        @at-root &.sp--bottom {
             justify-content: flex-end;
         }
 
-        @at-root &.sp--align-v-space-between {
+        @at-root &.sp--space-between {
             justify-content: space-between;
         }
 
-        @at-root &.sp--align-v-space-around {
+        @at-root &.sp--space-around {
             justify-content: space-around;
         }
 
-        @at-root &.sp--align-left {
+        @at-root &.sp--left {
             align-items: flex-start;
         }
 
-        @at-root &.sp--align-h-center {
+        @at-root &.sp--h-center {
             align-items: center;
         }
 
-        @at-root &.sp--align-right {
+        @at-root &.sp--right {
             align-items: flex-end;
         }
 
-        @at-root &.sp--align-h-stretch {
+        @at-root &.sp--stretch {
             align-items: stretch;
         }
 
-        @at-root &.sp--align-h-baseline {
+        @at-root &.sp--baseline {
             align-items: baseline;
         }
 
-        .sp__item--align-left {
+        .sp__item--left {
             align-self: flex-start;
         }
 
-        .sp__item--align-h-center {
+        .sp__item--center {
             align-self: center;
         }
 
-        .sp__item--align-right {
+        .sp__item--right {
             align-self: flex-end;
         }
 
-        .sp__item--align-h-stretch {
+        .sp__item--stretch {
             align-self: stretch;
         }
 
-        .sp__item--align-h-baseline {
+        .sp__item--baseline {
             align-self: baseline;
         }
     }
 
     @for $i from 1 through 10 {
-        & > .sp__item--size-flex-#{$i} {
-            flex: #{$i};
+        & > .sp__item--#{$i}-flex {
+            flex: #{$i} 0 auto;
         }
     }
 
-    @for $i from 1 through 10 {
-        & > .sp__item--size-percent-#{$i*10} {
-            flex: 0 0 #{percentage($i/10)};
+    @for $i from 1 through 20 {
+        & > .sp__item--#{$i*5}-pct {
+            flex: 0 0 #{percentage($i/20)};
         }
     }
 
-    $noOfCols: 12;
+    $noOfCols: 16;
     @for $i from 1 through $noOfCols {
-        & > .sp__item--size-ratio-#{$i} {
+        & > .sp__item--#{$i}-of-#{$noOfCols} {
             flex: 0 0 #{percentage($i/$noOfCols)};
         }
     }
