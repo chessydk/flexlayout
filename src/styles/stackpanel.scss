@@ -134,6 +134,22 @@
         }
     }
 
+    .push-right {
+        margin-left: auto;
+    }
+
+    .push-left {
+        margin-right: auto;
+    }
+
+    .push-up {
+        margin-bottom: auto;
+    }
+
+    .push-down {
+        margin-top: auto;
+    }
+
     @for $i from 1 through 10 {
         & > .sp__item--#{$i}-flex {
             flex: #{$i} 0 auto;
