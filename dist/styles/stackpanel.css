@@ -1,6 +1,8 @@
 .stackpanel {
   display: flex;
   flex-wrap: nowrap; }
+  > * {
+    flex: 0 0 auto; }
   .stackpanel:not(.sp--v) {
     flex-direction: row;
     justify-content: flex-start;
