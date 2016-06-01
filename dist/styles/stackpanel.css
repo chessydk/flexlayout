@@ -1,7 +1,7 @@
 .stackpanel {
   display: flex;
   flex-wrap: nowrap; }
-  > * {
+  .stackpanel > * {
     flex: 0 0 auto; }
   .stackpanel:not(.sp--v) {
     flex-direction: row;
